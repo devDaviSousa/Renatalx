@@ -7,7 +7,7 @@ const specificationsRoutes = Router();
 
 specificationsRoutes.post("/", (request, response) => {
 
-  return createSpecificationContoller.handle(request, response)
+  return createSpecificationContoller.handle(request, response);
 
 })
 
