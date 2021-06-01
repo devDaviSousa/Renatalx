@@ -1,6 +1,7 @@
 import { Category } from "../model/Category";
 
 //DTO= receber dados da rotta
+
 interface ICreateCategoryDTO {
   name: string;
   description: string;
