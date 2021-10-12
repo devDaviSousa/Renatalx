@@ -18,17 +18,16 @@ class CategoriesRepository implements ICategoriesRepository {
     }
     return CategoriesRepository.INSTANCE;
 
+    
+
   }
 
   create({ name, description }: ICreateCategoryDTO): void {
     const category = new Category();
 
-    Object.assign(category, {
-      name, description, created_at: new Date()
-    })
+    Object.assign(category, { name, description, created_at: new Date() });
 
-
-    this.categories.push(category)
+    this.categories.push(category);
   }
 
   list(): Category[] {
