@@ -4,7 +4,7 @@ import multer from "multer";
 
 import { createCategoryController } from "../modules/cars/useCases/createCategory";
 import { listCategoriesController } from "../modules/cars/useCases/listCategories";
-import { importCategoryController } from "../modules/cars/useCases/importCatergory"
+import { importCategoryController } from "../modules/cars/useCases/importCatergory";
 
 
 const categoriesRoutes = Router();
@@ -15,7 +15,8 @@ const upload = multer({
 });
 
 categoriesRoutes.post('/', (request, response) => {
-
+  
+console.log('reloade funcionakdo')
   return createCategoryController.handle(request, response);
 });
 
