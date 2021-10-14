@@ -5,15 +5,15 @@ import { ICategoriesRepository, ICreateCategoryDTO } from "../ICategoriesReposit
 
 class CategoriesRepository implements ICategoriesRepository {
 
-  private repository:Repository<Category>;
+  private repository: Repository<Category>;
 
   constructor() {
     this.repository = getRepository(Category);
   }
 
   async create({ name, description }: ICreateCategoryDTO): Promise<void> {
-    const category =  this.repository.create({
-      description,name
+    const category = this.repository.create({
+      description, name
     });
 
     await this.repository.save(category);
@@ -21,7 +21,6 @@ class CategoriesRepository implements ICategoriesRepository {
   }
 
   async list(): Promise<Category[]> {
-
     const categories = await this.repository.find();
     return categories;
 
@@ -30,7 +29,7 @@ class CategoriesRepository implements ICategoriesRepository {
   async findByName(name: string): Promise<Category> {
 
     //select * from categories where name = 'name'
-    const category = await this.repository.findOne({name});
+    const category = await this.repository.findOne({ name });
     return category;
   }
 

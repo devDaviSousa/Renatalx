@@ -8,9 +8,9 @@ interface ICreateSpeficication {
 
 interface ISpecificationsRepository {
 
-  create({ name, description }: ICreateSpeficication): void;
+  create({ name, description }: ICreateSpeficication): Promise<void>;
 
-  findByDate(name: string): Specification;
+  findByDate(name: string): Promise<Specification>;
 
 }
 
