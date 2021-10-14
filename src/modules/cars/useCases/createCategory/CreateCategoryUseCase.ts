@@ -1,4 +1,4 @@
-import { inject,injectable } from "tsyringe";
+import { inject, injectable } from "tsyringe";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {
@@ -8,7 +8,7 @@ interface IRequest {
 
 @injectable()
 class CreateCategoryUseCase {
-  
+
   constructor(
     @inject("CategoriesRepository")
     private categoriesRepository: ICategoriesRepository) { }

@@ -1,7 +1,7 @@
 import { Specification } from "../../entities/Specification";
-import { IspecificationRepository, ICreateSpeficication } from "../ISpecificationRepository";
+import { ISpecificationsRepository, ICreateSpeficication } from "../ISpecificationsRepository";
 
-class SpecificationRepository implements IspecificationRepository {
+class SpecificationsRepository implements ISpecificationsRepository {
 
   private specifications: Specification[];
 
@@ -9,7 +9,6 @@ class SpecificationRepository implements IspecificationRepository {
     this.specifications = [];
 
   }
-
 
   create({ name, description }: ICreateSpeficication): void {
     const specification = new Specification();
@@ -28,4 +27,4 @@ class SpecificationRepository implements IspecificationRepository {
 
 }
 
-export { SpecificationRepository }
+export { SpecificationsRepository }

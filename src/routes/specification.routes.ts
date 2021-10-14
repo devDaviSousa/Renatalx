@@ -1,15 +1,12 @@
 import { Router } from "express"
-import { createSpecificationContoller } from "../modules/cars/useCases/createSpecification";
+import { CreateSpecificationContoller } from "../modules/cars/useCases/createSpecification/CreateSpecificationContoller";
 
 
 const specificationsRoutes = Router();
 
+const createSpecificationContoller = new CreateSpecificationContoller();
 
-specificationsRoutes.post("/", (request, response) => {
-
-  return createSpecificationContoller.handle(request, response);
-
-})
+specificationsRoutes.post("/", createSpecificationContoller.handle);
 
 
 export { specificationsRoutes }

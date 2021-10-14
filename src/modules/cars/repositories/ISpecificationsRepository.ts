@@ -6,7 +6,7 @@ interface ICreateSpeficication {
   description: string;
 }
 
-interface IspecificationRepository {
+interface ISpecificationsRepository {
 
   create({ name, description }: ICreateSpeficication): void;
 
@@ -14,4 +14,4 @@ interface IspecificationRepository {
 
 }
 
-export { IspecificationRepository, ICreateSpeficication }
+export { ISpecificationsRepository, ICreateSpeficication }
