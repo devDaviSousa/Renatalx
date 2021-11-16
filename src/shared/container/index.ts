@@ -6,8 +6,6 @@ import { ISpecificationsRepository } from "../../modules/cars/repositories/ISpec
 import { UsersRepository } from "../../modules/users/repositories/implementations/UsersRepository";
 import { IUsersRepository } from "../../modules/users/repositories/IUsersRepository";
 
-
-
 container.registerSingleton<ICategoriesRepository>(
     "CategoriesRepository", CategoriesRepository
 );
