@@ -1,4 +1,4 @@
-import { Category } from "../entities/Category";
+import { Category } from "@modules/cars/infra/typeorm/entities/Category";
 
 //DTO= receber dados da rotta
 
@@ -8,7 +8,7 @@ interface ICreateCategoryDTO {
 }
 
 interface ICategoriesRepository {
-  findByName(name: string):Promise<Category>;
+  findByName(name: string): Promise<Category>;
   list(): Promise<Category[]>;
   create({ name, description }: ICreateCategoryDTO): Promise<void>;
 }
