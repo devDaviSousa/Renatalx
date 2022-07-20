@@ -1,10 +1,16 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, PrimaryColumn } from "typeorm";
-import { v4 as uuidV4 } from "uuid"
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  JoinColumn,
+  ManyToMany,
+  PrimaryColumn,
+} from "typeorm";
+import { v4 as uuidV4 } from "uuid";
 import { Category } from "./Category";
 
 @Entity("cars")
 class Car {
-
   @PrimaryColumn()
   id: string;
 
@@ -45,7 +51,6 @@ class Car {
       this.available = true;
     }
   }
-
 }
 
-export { Car }
+export { Car };
